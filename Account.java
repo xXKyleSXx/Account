@@ -32,4 +32,12 @@ public static boolean isAvailable(String str) throws FileNotFoundException {
 public String getUsername() {
         return username;
     }
+    public String getShortenedName() {
+        String shortenedName = username;
+        int hyphen = shortenedName.indexOf('-');
+        if (hyphen != -1) {
+            shortenedName = shortenedName.substring(0, hyphen);
+        }
+        return shortenedName;
+    }
 }
